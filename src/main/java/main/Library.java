@@ -1,39 +1,12 @@
 package main;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Library {
     private ArrayList<Book> books = new ArrayList<>();
-    Scanner sc = new Scanner(System.in);
 
-    public void addBook() {
-        System.out.println("Minkä kirjan haluat lisätä kirjastoon? 1) Fiktiokirja, 2) Tietokirja");
-        int bookType = Integer.parseInt(sc.nextLine());
-        
-        System.out.println("Anna kirjan nimi:");
-        String title = sc.nextLine();
-
-        System.out.println("Anna kirjailijan nimi:");
-        String author = sc.nextLine();
-
-        System.out.println("Anna sivumäärä:");
-        int pages = Integer.parseInt(sc.nextLine());
-
-        System.out.println("Anna kirjojen määrä:");
-        int copies = Integer.parseInt(sc.nextLine());
-
-        if (bookType != 1 && bookType != 2) {
-            System.out.println("Virheellinen kirjatyyppi.");
-            return;
-        }
-
-        if (bookType == 1) {
-            books.add(new FictionBook(title, author, pages, copies));
-        } else if (bookType == 2) {
-            books.add(new NonFictionBook(title, author, pages, copies));
-        }
-
+    public void addBook(Book book) {
+        books.add(book);
         System.out.println("Kirja lisätty kirjastoon!");
 
     }
