@@ -19,7 +19,7 @@ public class FictionBook extends Book {
             borrowedCount++;
             System.out.println("Kirja " + getTitle() + " on nyt lainattu.");
         } else {
-            System.out.println("Kirjaa " + getTitle() + " ei enää ole lainattavissa!");
+            System.out.println("Kirjaa " + getTitle() + " ei enään ole lainattavissa!");
         }
     }
 
