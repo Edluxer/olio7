@@ -46,7 +46,6 @@ public class Library {
         int totalCopies = 0;
         for (Book book : books) {
             book.displayInfo();
-            System.out.println("Kirjan kategoria: " + book.categorize());
             totalCopies += book.getCopies();
         }
         System.out.println("Kirjojen määrä kirjastossa on: " + totalCopies);
